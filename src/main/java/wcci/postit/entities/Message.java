@@ -15,6 +15,8 @@ public class Message {
     private long id;
     private String message;
     private Color color;
+    @ManyToOne
+    private Student student;
 
 
 //    public Message(List<Student> students) {
@@ -33,14 +35,4 @@ public class Message {
         return message;
     }
 
-    @ManyToOne(optional = false)
-    private Student students;
-
-    public Student getStudents() {
-        return students;
-    }
-
-    public void setStudents(Student students) {
-        this.students = students;
-    }
 }
