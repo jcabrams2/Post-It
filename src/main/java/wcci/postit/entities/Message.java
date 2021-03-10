@@ -23,7 +23,8 @@ public class Message {
 //        this.students = students;
 //    }
 
-    public Message() {
+    public Message(String message) {
+        this.message = message;
 
     }
 
