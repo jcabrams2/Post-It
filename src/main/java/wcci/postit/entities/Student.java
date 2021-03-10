@@ -1,11 +1,9 @@
 package wcci.postit.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 
@@ -16,8 +14,12 @@ public class Student {
     private long id;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "students")
     private List<Message> Messages;
+
+    public void setMessages(Collection<Message> messages) {
+        //Messages = messages;
+    }
 
 
     public Student(String firstName, String lastName) {
@@ -44,5 +46,16 @@ public class Student {
 
     public List<Message> getMessages() {
         return Messages;
+    }
+
+    @ManyToOne(optional = false)
+    private Cohort cohorts;
+
+    public Cohort getCohorts() {
+        return cohorts;
+    }
+
+    public void setCohorts(Cohort cohorts) {
+        this.cohorts = cohorts;
     }
 }
