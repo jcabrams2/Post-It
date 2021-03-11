@@ -23,8 +23,9 @@ public class Message {
 //        this.students = students;
 //    }
 
-    public Message(String message) {
+    public Message(String message, Student student) {
         this.message = message;
+        this.student = student;
 
     }
 

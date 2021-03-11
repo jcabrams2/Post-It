@@ -25,8 +25,26 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Cohort javaSpring21 = new Cohort("Columbus","Java");
-        Message message1 = new Message("Hello World");
         Student student1 = new Student("Celina", "Caban", javaSpring21);
+        Student student2 = new Student ("Doug", "WCCI", javaSpring21);
+//                "Michele",
+//                "Jonathon",
+//                "Keshav",
+//                "Bishnu",
+//                "Sarah",
+//                "Branden",
+//                "Miguel",
+//                "Bilen ",
+//                "Celia ",
+//                "Ricardo",
+//                "Connor",
+//                "Jelanie",
+//                "Lana",
+//                "Eduardo",
+//                "Fathi",
+//                "Weiwei"
+
+        Message message1 = new Message("Hello World",student1);
         javaSpring21.addStudent(student1);
         cohortRepository.save(javaSpring21);
         studentRepository.save(student1);
