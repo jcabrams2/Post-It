@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student View</title>
+</head>
+<body>
+<h1>Student Form Input</h1>
+<hr>
+<div class="form-group blu-margin">
+<form action="/submitMessage" method="POST">
+
+        <select name="student" class="form-control"  id="dropOperator" >
+            <option value="0">select student</option>
+            <option th:each="student : ${students}" th:value="${student.id}" th:text="${student.firstName}"></option>
+        </select>
+        <input name="color" type="color" value="#ffff99">
+
+        <textarea name="message" rows="10" cols="50">Add your message here</textarea>
+        <br><br>
+        <input type="submit">
+
+</form>
+
+</div>
+</body>
+</html>
