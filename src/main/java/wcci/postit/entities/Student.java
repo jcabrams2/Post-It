@@ -1,6 +1,7 @@
 package wcci.postit.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -15,11 +16,22 @@ public class Student {
     @ManyToOne
     private Cohort cohort;
 
-//    @OneToMany()
-//    private Collection<Message> Messages;
+    @OneToMany(mappedBy = "student")
+    private Collection<Message> messages;
+
+    public Collection<Message> getMessages() {
+        return messages;
+    }
 
     public void setMessages(Collection<Message> messages) {
-        //Messages = messages;
+        this.messages = messages;
+    }
+
+    public void addMessage(Message message) {
+        this.messages.add(message);
+    }
+    public Iterable<Message> getAllMessages(){
+        return this.messages;
     }
 
 
@@ -27,7 +39,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cohort = cohort;
-
+        this.messages = new ArrayList<>();
 //    this.Messages = Arrays.asList(Messages);
     }
 

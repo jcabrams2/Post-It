@@ -11,6 +11,8 @@ import wcci.postit.storage.repository.CohortRepository;
 import wcci.postit.storage.repository.StudentRepository;
 import wcci.postit.storage.repository.MessageRepository;
 
+import java.awt.*;
+
 @Component
 public class Populator implements CommandLineRunner {
 
@@ -44,11 +46,11 @@ public class Populator implements CommandLineRunner {
 //                "Fathi",
 //                "Weiwei"
 
-        Message message1 = new Message("Hello World",student1);
+        Message message1 = new Message("Hello World", "#00ff00", student1);
         javaSpring21.addStudent(student1);
         cohortRepository.save(javaSpring21);
         studentRepository.save(student1);
         messageRepository.save(message1);
-        System.out.println("Hello Jon");
+        studentRepository.save(student2);
     }
 }

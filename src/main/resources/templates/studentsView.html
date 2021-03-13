@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students View</title>
+</head>
+<body>
+
+<h1>Students View</h1>
+<hr><br>
+
+<ul th:each="student:${students}">
+<!--    <li th:text= "${student.getFirstName()}" ></li>-->
+    <li><a th:text="${student.getFirstName()}" th:href="'/students/' + ${student.getId()}" ></a></li>
+<!--    <li><a th:text="${post.title}" th:href="'/posts/' + ${post.id}"></a></li>-->
+
+</ul>
+</body>
+</html>
