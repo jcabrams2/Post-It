@@ -95,8 +95,10 @@ textarea{
     margin-bottom: 1rem;
     margin-top: 1rem;
     float: left;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 #studentMessageList:hover{
     transform: scale(1.5);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
