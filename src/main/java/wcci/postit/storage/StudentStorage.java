@@ -25,10 +25,6 @@ public class StudentStorage {
         return  this.studentRepo.findById(id).get();
     }
 
-//    Iterable<Student> retrieveAllStudents(long id);
-//
-//    void save(Student studentToSave);
-//
-//    Student retrieveSingleStudent(long id);
+
 
 }

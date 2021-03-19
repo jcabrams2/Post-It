@@ -25,9 +25,6 @@ public class Message {
     }
 
 
-//    public Message(List<Student> students) {
-//        this.students = students;
-//    }
 
     public Message(String message, String color, Student student) {
         this.message = message;

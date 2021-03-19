@@ -5,32 +5,30 @@
     <title>Student View</title>
 </head>
 <body>
-<h1 th:text="${student.firstName} + ' Post-It Input View'"> </h1>
+<h1 th:text="${student.firstName} + ' Post-It Input View'"></h1>
 <form action="" th:action="'/'+${cohort}+'/students'">
-    <input type="submit" value="Go to Class View" />
+    <input type="submit" value="Go to Class View"/>
 </form>
 <hr>
 <div class="form-group blu-margin">
-<form action="" th:action="'/'+${cohort}+'/students/' + ${student.getId()}" method="POST">
+    <form action="" th:action="'/'+${cohort}+'/students/' + ${student.getId()}" method="POST">
 
-<!--        <select name="student" class="form-control"  id="dropOperator" >-->
-<!--            <option value="0">select student</option>-->
-<!--            <option th:each="student : ${students}" th:value="${student.id}" th:text="${student.firstName}"></option>-->
-<!--        </select>-->
-        <input name="color" type="color" value="#ffff99">
+
         <input type="hidden" name="studentId" value="" th:value="${student.getId()}">
         <textarea name="message" rows="10" cols="50" placeholder="Add your message here"></textarea>
+        <br>
+        <input name="color" type="color" value="#ffff99">
         <br><br>
         <input type="submit">
 
-</form>
+    </form>
     <br>
     <hr>
-<ul th:each="message:${messages}">
-    <div style="background: #ff0000" th:style="'background:'+${message.getColor()}">
-    <li th:text="${message.message}"></li>
-    </div>
-</ul>
+    <ul th:each="message:${messages}">
+        <div style="background: #ff0000" th:style="'background:'+${message.getColor()}">
+            <li th:text="${message.message}"></li>
+        </div>
+    </ul>
 
 </div>
 </body>

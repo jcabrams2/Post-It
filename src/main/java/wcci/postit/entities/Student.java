@@ -31,7 +31,8 @@ public class Student {
     public void addMessage(Message message) {
         this.messages.add(message);
     }
-    public Iterable<Message> getAllMessages(){
+
+    public Iterable<Message> getAllMessages() {
         return this.messages;
     }
 
@@ -56,37 +57,29 @@ public class Student {
         return firstName;
     }
 
-    public boolean hasMessage(){
-        if(messages.size()>0){
+    public boolean hasMessage() {
+        if (messages.size() > 0) {
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     public Message getLastMessage() {
         Message message = null;
-            if(messages.size()>0) {
-                final Iterator itr = messages.iterator();
-                Object lastElement = itr.next();
-                while (itr.hasNext()) {
-                    lastElement = itr.next();
-                }
-                message = (Message) lastElement;
+        if (messages.size() > 0) {
+            final Iterator itr = messages.iterator();
+            Object lastElement = itr.next();
+            while (itr.hasNext()) {
+                lastElement = itr.next();
             }
+            message = (Message) lastElement;
+        }
 
-            return message;
+        return message;
 
     }
 
     public String getLastName() {
         return lastName;
     }
-
-//    public List<Message> getMessages() {
-//        return Messages;
-//    }
-
-
-
 
 }
