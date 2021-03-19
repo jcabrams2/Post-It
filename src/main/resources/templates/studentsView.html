@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
     <title>Students View</title>
 </head>
 <body>
@@ -11,15 +12,12 @@
 
 <ul th:each="student:${students}">
 <!--    <li th:text= "${student.getFirstName()}" ></li>-->
-    <li><a th:text="${student.getFirstName()}" th:href="${student.getId()}" ></a></li>
-<!--        <ul th:each="message:${student.getAllMessages()}">-->
-<!--            <li th:text="${message.getMessage()}"></li>-->
-<!--        </ul>-->
-            <ul>
-                <li th:text="${student.hasMessage} ? ${student.getLastMessage().getMessage()} : 'Add a message'"></li>
-            </ul>
-<!--    <li><a th:text="${post.title}" th:href="'/posts/' + ${post.id}"></a></li>-->
-
+    <li>
+        <a  th:href="${student.getId()}">
+            <h2 th:text="${student.getFirstName()}"></h2>
+            <p th:text="${student.hasMessage} ? ${student.getLastMessage().getMessage()} : 'Add a message'"></p>
+        </a>
+    </li>
 </ul>
 </body>
 </html>
