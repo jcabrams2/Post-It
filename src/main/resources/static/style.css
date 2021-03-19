@@ -9,33 +9,37 @@ body {
     margin:0;
     padding:0;
 }
-
+h1 {
+    margin:10px;
+}
 h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 p {
-    font-size: 1rem;
-    font-weight: normal;
+    font-family: 'Reenie Beanie';
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul,li{
     list-style:none;
 }
-ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 ul li a{
     text-decoration:none;
     color:#000;
-    background:#ffc;
+    /*background: #ffffcc;*/
     display:block;
     height:10em;
     width:10em;
     padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 ul li{
     margin:1em;

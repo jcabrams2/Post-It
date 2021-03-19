@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
     <title>Students View</title>
 </head>
 <body>
-<h1 th:text="${cohort.getName()}"></h1>
-<h1>Students View </h1>
+<h1 th:text="${cohort.getName()} + ' - Students View'"></h1>
 <hr><br>
-
+<div class="container">
 <ul th:each="student:${students}">
-<!--    <li th:text= "${student.getFirstName()}" ></li>-->
-    <li>
+    <li th:style="${student.hasMessage} ? 'background:' + ${student.getLastMessage().getColor()} : 'background:#ffffbb;' ">
+
         <a  th:href="${student.getId()}">
-            <h2 th:text="${student.getFirstName()}"></h2>
+            <h2 th:text="${student.getFirstName()}"></h2><hr>
             <p th:text="${student.hasMessage} ? ${student.getLastMessage().getMessage()} : 'Add a message'"></p>
         </a>
     </li>
 </ul>
+</div>
 </body>
 </html>

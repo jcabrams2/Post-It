@@ -33,7 +33,7 @@ public class Populator implements CommandLineRunner {
 // Student Test List
         //ArrayList<Student> students = new ArrayList<Student>();
         //students.add(new Student("Celina", "Caban", javaSpring21));
-        Student student1 = new Student("Celina", "Caban", javaSpring21);
+        Student student1 = new Student("Jordan", "WCCI", javaSpring21);
         Student student2 = new Student ("Doug", "WCCI", javaSpring21);
         Student student3 = new Student("Michelle","WCCI", javaSpring21 );
         Student student4 = new Student("Jonathon", "WCCI", javaSpring21);
@@ -51,7 +51,7 @@ public class Populator implements CommandLineRunner {
         Student student16 = new Student("Eduardo", "WCCI", javaSpring21);
         Student student17 = new Student("Fathi", "WCCI", javaSpring21);
         Student student18 = new Student("Weiwei", "WCCI", javaSpring21);
-
+        Student student19 = new Student("David", "WCCI", javaSpring21);
 
 
 
@@ -78,6 +78,6 @@ public class Populator implements CommandLineRunner {
         studentRepository.save(student16);
         studentRepository.save(student17);
         studentRepository.save(student18);
-
+        studentRepository.save(student19);
     }
 }
