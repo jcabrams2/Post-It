@@ -18,16 +18,16 @@
 
 
         <input type="hidden" name="studentId" value="" th:value="${student.getId()}">
-        <textarea name="message" rows="10" cols="50" placeholder="Add your message here"></textarea>
+        <textarea name="message" rows="10" cols="50" placeholder="Add your message here" ></textarea>
         <br>
-        <input name="color" type="color" value="#ffff99">
+        <input id="colorBox" name="color" type="color" value="#ffff99">
         <br><br>
         <input id="submitButton" type="submit">
 
     </form>
     <br>
     <hr>
-    <ul th:each="message:${messages}">
+    <ul id="studentView__messages" th:each="message:${messages}">
         <div id="studentMessageList" style="background: #ff0000" th:style="'background:'+${message.getColor()}">
             <li th:text="${message.message}"></li>
         </div>

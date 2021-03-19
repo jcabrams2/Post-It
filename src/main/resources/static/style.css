@@ -50,6 +50,9 @@ ul li{
 textarea{
     font-family: "Permanent Marker";
     font-size: 1rem;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin-top: 1rem;
+    margin-left: 1rem;
 
 }
 #studentMessageList{
@@ -68,8 +71,24 @@ textarea{
 #classViewButton{
     font-family: 'Courier New', monospace;
     font-size: 1rem;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin-bottom: 1rem;
+    border: 2px black;
+    margin-left: 1rem;
 }
 #submitButton{
     font-family: 'Courier New', monospace;
     font-size: 1rem;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    border: 2px black;
+    margin-left: 1rem;
 }
+#colorBox{
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin-left: 1rem;
+}
+#studentView__messages{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
