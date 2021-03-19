@@ -2,6 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Permanent+Marker" />
     <title>Student View</title>
 </head>
 <body>
@@ -25,7 +28,7 @@
     <br>
     <hr>
     <ul th:each="message:${messages}">
-        <div style="background: #ff0000" th:style="'background:'+${message.getColor()}">
+        <div id="studentMessageList" style="background: #ff0000" th:style="'background:'+${message.getColor()}">
             <li th:text="${message.message}"></li>
         </div>
     </ul>
