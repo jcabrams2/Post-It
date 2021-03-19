@@ -47,6 +47,9 @@ ul li a{
 ul li{
     margin:.5em;
 }
+ul li:hover{
+    transform: scale(1.5);
+}
 textarea{
     font-family: "Permanent Marker";
     font-size: 1rem;
@@ -92,5 +95,8 @@ textarea{
     margin-bottom: 1rem;
     margin-top: 1rem;
     float: left;
+}
+#studentMessageList:hover{
+    transform: scale(1.5);
 }
 
