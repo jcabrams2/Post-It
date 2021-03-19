@@ -10,7 +10,7 @@
 <body>
 <h1 th:text="${student.firstName} + ' Post-It Input View'"></h1>
 <form action="" th:action="'/'+${cohort}+'/students'">
-    <input type="submit" value="Go to Class View"/>
+    <input id="classViewButton" type="submit" value="Go to Class View"/>
 </form>
 <hr>
 <div class="form-group blu-margin">
@@ -22,7 +22,7 @@
         <br>
         <input name="color" type="color" value="#ffff99">
         <br><br>
-        <input type="submit">
+        <input id="submitButton" type="submit">
 
     </form>
     <br>
