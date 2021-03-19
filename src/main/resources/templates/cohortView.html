@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cohort View</title>
+</head>
+<body>
+<h1 th:text="${cohort.getName()}"></h1>
+<h1>Cohort View</h1>
+<hr>
+<div>
+    <ul th:each="${}"></ul>
+    <li><a th:each="${}"></a></li>
+</div>
+</body>
+</html>

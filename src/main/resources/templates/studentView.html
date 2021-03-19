@@ -8,7 +8,7 @@
 <h1 th:text="${student.firstName} + ' Post-It Input View'"> </h1>
 <hr>
 <div class="form-group blu-margin">
-<form action="" th:action="'/students/' + ${student.getId()}" method="POST">
+<form action="" th:action="'/'+${cohort}+'/students/' + ${student.getId()}" method="POST">
 
 <!--        <select name="student" class="form-control"  id="dropOperator" >-->
 <!--            <option value="0">select student</option>-->

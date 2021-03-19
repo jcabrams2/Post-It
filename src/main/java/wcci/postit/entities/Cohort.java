@@ -13,9 +13,11 @@ import java.util.List;
 
 @Entity
 public class Cohort {
+
     @Id
     @GeneratedValue
     private Long id;
+    private String name;
     private String city;
     private Date year;
     private String course;
@@ -24,14 +26,35 @@ public class Cohort {
 
     protected Cohort(){}
 
-    public Cohort(String city, String course) {
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public Date getYear() {
+        return year;
+    }
+
+    public String getCohort() {
+        return course;
+    }
+
+    public Cohort(String name, String city, String course) {
+        this.name = name;
         this.city = city;
         this.course = course;
         this.students = new ArrayList<Student>();
     }
 
     public Collection<Student> getStudents() {
-        return students;
+        return this.students;
     }
 
     public void setStudents(Collection<Student> students) {

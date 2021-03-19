@@ -5,13 +5,19 @@
     <title>Students View</title>
 </head>
 <body>
-
-<h1>Students View</h1>
+<h1 th:text="${cohort.getName()}"></h1>
+<h1>Students View </h1>
 <hr><br>
 
 <ul th:each="student:${students}">
 <!--    <li th:text= "${student.getFirstName()}" ></li>-->
-    <li><a th:text="${student.getFirstName()}" th:href="'/students/' + ${student.getId()}" ></a></li>
+    <li><a th:text="${student.getFirstName()}" th:href="${student.getId()}" ></a></li>
+<!--        <ul th:each="message:${student.getAllMessages()}">-->
+<!--            <li th:text="${message.getMessage()}"></li>-->
+<!--        </ul>-->
+            <ul>
+                <li th:text="${student.getLastMessage().get().getMessage()}"></li>
+            </ul>
 <!--    <li><a th:text="${post.title}" th:href="'/posts/' + ${post.id}"></a></li>-->
 
 </ul>

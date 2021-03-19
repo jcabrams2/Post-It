@@ -3,7 +3,8 @@ package wcci.postit.entities;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
-
+import java.util.Iterator;
+import java.util.Optional;
 
 
 @Entity
@@ -39,7 +40,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cohort = cohort;
-        this.messages = new ArrayList<>();
+        this.messages = new ArrayList<Message>();
 //    this.Messages = Arrays.asList(Messages);
     }
 
@@ -53,6 +54,22 @@ public class Student {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public Optional<Message> getLastMessage() {
+        Message message;
+                if(messages.size()>0) {
+                    final Iterator itr = messages.iterator();
+                    Object lastElement = itr.next();
+                    while (itr.hasNext()) {
+                        lastElement = itr.next();
+                    }
+                    message = (Message) lastElement;
+                }
+
+                Optional<Message> opt = Optional.ofNullable(message);
+                return opt;
+
     }
 
     public String getLastName() {
