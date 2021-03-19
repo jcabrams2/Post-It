@@ -55,7 +55,7 @@ public class Populator implements CommandLineRunner {
 
 
 
-        Message message1 = new Message("Hello World", "#00ff00", student1);
+        Message message1 = new Message("I love the IRS", "#00ff00", student1);
 //        javaSpring21.addStudent(student1);
         cohortRepository.save(javaSpring21);
         studentRepository.save(student1);
