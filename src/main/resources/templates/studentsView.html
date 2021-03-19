@@ -16,7 +16,7 @@
 <!--            <li th:text="${message.getMessage()}"></li>-->
 <!--        </ul>-->
             <ul>
-                <li th:text="${student.getLastMessage().get().getMessage()}"></li>
+                <li th:text="${student.hasMessage} ? ${student.getLastMessage().getMessage()} : 'Add a message'"></li>
             </ul>
 <!--    <li><a th:text="${post.title}" th:href="'/posts/' + ${post.id}"></a></li>-->
 

@@ -56,19 +56,26 @@ public class Student {
         return firstName;
     }
 
-    public Optional<Message> getLastMessage() {
-        Message message;
-                if(messages.size()>0) {
-                    final Iterator itr = messages.iterator();
-                    Object lastElement = itr.next();
-                    while (itr.hasNext()) {
-                        lastElement = itr.next();
-                    }
-                    message = (Message) lastElement;
-                }
+    public boolean hasMessage(){
+        if(messages.size()>0){
+            return true;
+        }
+        else return false;
+    }
 
-                Optional<Message> opt = Optional.ofNullable(message);
-                return opt;
+    public Message getLastMessage() {
+        Message message = null;
+            if(messages.size()>0) {
+                final Iterator itr = messages.iterator();
+                Object lastElement = itr.next();
+                while (itr.hasNext()) {
+                    lastElement = itr.next();
+                }
+                message = (Message) lastElement;
+            }
+
+
+            return message;
 
     }
 
