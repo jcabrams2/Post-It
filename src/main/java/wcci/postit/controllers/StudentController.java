@@ -29,6 +29,10 @@ public class StudentController {
         this.messageStorage = messageStorage;
         this.cohortStorage = cohortStorage;
     }
+    @RequestMapping("/**")
+    public String redirectToStudents(@PathVariable String cohort, Model model) {
+        return "redirect:/"+ cohort +"/students/";
+    }
 
     @RequestMapping("/")
     public String listAllStudents(@PathVariable String cohort, Model model) {
@@ -37,6 +41,7 @@ public class StudentController {
 
         return "studentsView";
     }
+
 
     @RequestMapping("/{id}")
     public String studentView(@PathVariable Long id,@PathVariable String cohort, Model model) {

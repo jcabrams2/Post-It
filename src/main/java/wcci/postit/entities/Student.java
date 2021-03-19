@@ -74,7 +74,6 @@ public class Student {
                 message = (Message) lastElement;
             }
 
-
             return message;
 
     }
